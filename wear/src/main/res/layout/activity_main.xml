@@ -32,4 +32,12 @@
         android:layout_marginBottom="10dp" />
 
 
+    <Button
+        android:id="@+id/currentTemperature"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="10dp" />
+
+
 </android.support.wear.widget.BoxInsetLayout>

@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.FragmentManager;
 import android.support.wearable.activity.WearableActivity;
 import android.view.View;
 import android.widget.Button;
@@ -18,17 +19,17 @@ public class MainActivity extends WearableActivity {
 
     private TextView mTextView;
     private static final int MY_PERMISSIONS_REQUEST_CALL=1;
-    Button makeCall;
+    Button makeCall,currentTemperature;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
-        //makecall=(Button)findViewById(R.id.makecall);
+
 
         mTextView = (TextView) findViewById( R.id.text );
         //mTextView.setText( WeatherUpdate.getCurrentTemp().get(0));
-        mTextView.setText( "Call getCurrentTemp here");
+        mTextView.setText( "Click to get CurrentTemp");
 
         makeCall=(Button)findViewById(R.id.makecall);
 
@@ -41,6 +42,16 @@ public class MainActivity extends WearableActivity {
                 ;
                 Intent call=new Intent(Intent.ACTION_CALL,Uri.parse("tel:+911234567890"));
                 makePhoneCall();
+            }
+        });
+
+       currentTemperature =  (Button)findViewById(R.id.currentTemperature);
+        currentTemperature.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                Intent temp=new Intent(MainActivity.this,TemperatureFragment.class);
+                startActivity( temp );
             }
         });
 

@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WeatherUpdate {
-    static String CLIENT_ID = "5ubJAGCLQtU0rr3qnbeuO ";
-    static String CLIENT_SECRET = "pSHdVCUWtD1sagvskXghgmQVEqwnOScxgCYvx1cA";
+    static String CLIENT_ID = "caZTTXpf5fuA2tmg9Suz3";
+    static String CLIENT_SECRET = "J06zNZjwoytXqegqQ1GvEN71hdkJbYKGdmdMsjkc";
     static String BASE_URL = "http://api.aerisapi.com/";
 
     public static List<String> getCurrentTemp() {
