@@ -27,9 +27,9 @@ public class MainActivity extends WearableActivity {
         setContentView( R.layout.activity_main );
 
 
-        mTextView = (TextView) findViewById( R.id.text );
+      /*  mTextView = (TextView) findViewById( R.id.text );
         //mTextView.setText( WeatherUpdate.getCurrentTemp().get(0));
-        mTextView.setText( "Click to get CurrentTemp");
+        mTextView.setText( "Click to get CurrentTemp");*/
 
         makeCall=(Button)findViewById(R.id.makecall);
 
@@ -46,6 +46,7 @@ public class MainActivity extends WearableActivity {
         });
 
        currentTemperature =  (Button)findViewById(R.id.currentTemperature);
+       currentTemperature.setText( "Click to get CurrentTemp" );
         currentTemperature.setOnClickListener(new View.OnClickListener() {
 
             @Override

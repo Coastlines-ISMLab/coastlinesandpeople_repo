@@ -23,7 +23,7 @@ public class TemperatureFragment extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_main );
+        setContentView( R.layout.main_second );
 
         Thread thread = new Thread(new Runnable() {
 
@@ -36,8 +36,8 @@ public class TemperatureFragment extends Activity {
                         @Override
                         public void run() {
 
-                            myView = (TextView) findViewById( R.id.text );
-                            myView.setText(weather.get( 0 ));
+                            myView = (TextView) findViewById( R.id.textView2 );
+                            myView.setText("Current temperature is "+weather.get( 0 )+" ° F");
 
                         }
                     });
