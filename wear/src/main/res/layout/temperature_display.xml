@@ -12,24 +12,18 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/inner_frame_layout_padding"
+        android:padding="5dp"
         app:boxedEdges="all">
 
-        <Button
-            android:id="@+id/makecall"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/call_phone_telephone"
-            android:layout_gravity="bottom|center"
-            android:layout_marginBottom="5dp" />
-
-
-        <Button
-            android:id="@+id/currentTemperature"
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="top|center"
-            android:layout_marginTop="10dp" />
+            android:layout_centerHorizontal="@bool/action_choose_symmetrical_dimen"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="top"/>
 
     </FrameLayout>
 
