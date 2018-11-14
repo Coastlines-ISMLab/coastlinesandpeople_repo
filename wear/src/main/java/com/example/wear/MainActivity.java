@@ -19,7 +19,7 @@ public class MainActivity extends WearableActivity {
 
     private TextView mTextView;
     private static final int MY_PERMISSIONS_REQUEST_CALL=1;
-    Button makeCall,currentTemperature;
+    Button makeCall,currentTemperature, seeOnMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class MainActivity extends WearableActivity {
         });
 
        currentTemperature =  (Button)findViewById(R.id.currentTemperature);
-       currentTemperature.setText( "Click to get CurrentTemp" );
+       currentTemperature.setText( "Current Temp" );
         currentTemperature.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -57,6 +57,16 @@ public class MainActivity extends WearableActivity {
         });
 
 
+        seeOnMap=(Button)findViewById(R.id.seeOnMap);
+        seeOnMap.setText( "See on Map" );
+        seeOnMap.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                Intent temp=new Intent(MainActivity.this,MapsActivity.class);
+                startActivity( temp );
+            }
+        });
 
 
         // Enables Always-on
