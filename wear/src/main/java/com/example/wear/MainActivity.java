@@ -80,7 +80,7 @@ public class MainActivity extends WearableActivity {
                     MY_PERMISSIONS_REQUEST_CALL);
 
         } else{
-            startActivity(new Intent( Intent.ACTION_CALL, Uri.parse( "tel:+18138954757" ) ));
+            startActivity(new Intent( Intent.ACTION_CALL, Uri.parse( "tel:+1123456789" ) ));
         }
 
     }
